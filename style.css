@@ -1,0 +1,23 @@
+.boss-Img {
+    height: 25vh;
+    width: 25vh;
+    background-size: cover;
+}
+
+.boss-bg-img {
+    background-image: url(https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);
+    background-size: cover;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80);
+    background-size: cover;
+}
+
+.no-select {
+    user-select: none;
+}
+
+p {
+    text-shadow: 1px 1px 2px black;
+}
