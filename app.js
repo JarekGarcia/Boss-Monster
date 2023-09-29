@@ -28,17 +28,31 @@ function attackBoss() {
     console.log('before clamp', boss)
     if (boss.health < 0) {
         boss.health = 0
+        drawBossHp()
     }
+    drawBossHp()
     console.log('after clamp', boss)
 
-    drawBossHp()
     // bossAttack()
 }
 
 function drawBossHp() {
     const bossHp = boss.health
+    const bossLvl = boss.level
+    const bossMaxhp = boss.maxHealth
+    heroes.forEach(hero => hero.gold)
+
+    if (boss.health <= 0) {
+        boss.health = bossMaxhp
+        boss.maxHealth += 25
+        boss.level++
+
+
+    }
     // @ts-ignore
     document.getElementById('bossHp').innerText = bossHp
+    document.getElementById('bossLvl').innerText = bossLvl
+
 }
 
 function bossAttack() {
@@ -59,8 +73,18 @@ function drawHeroHp() {
         // @ts-ignore
         document.getElementById(hero.name + '_GOLD').innerText = hero.gold
     })
-    // document.getElementById(boss.name + '_LVL').innerText = boss.level
 
+}
+
+// function drawBossHp(){
+// document.getElementById(boss + '_HP').innerText = boss.level
+// }
+
+function slayBoss() {
+    if (boss.health < 0) {
+        boss.health = 100
+        boss.level++
+    }
 }
 
 setInterval(bossAttack, 5000)
